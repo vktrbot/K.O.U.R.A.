@@ -1,0 +1,31 @@
+[Unit]
+Description=My Python GPIO Script
+After=network.target
+
+[Service]
+Type=simple
+
+# Your user (or use pi)
+User=aapo
+Group=gpio
+SupplementaryGroups=gpio
+
+# Ensure Python has full environment
+Environment=PYTHONUNBUFFERED=1
+
+# Command to run your script
+ExecStart=/home/aapo/Desktop/koura/venv_koura/bin/python /home/aapo/Desktop/koura/server_pi.py
+
+# Restart if it crashes
+Restart=on-failure
+RestartSec=5
+
+# Ensure correct working directory
+WorkingDirectory=/home/aapo/Desktop/koura  
+
+# Standard logs go to journalctl
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

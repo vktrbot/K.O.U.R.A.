@@ -1,0 +1,11 @@
+[Unit]
+Description=Connect to Hotspot and Start Server
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/aapo/wifi_switch.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

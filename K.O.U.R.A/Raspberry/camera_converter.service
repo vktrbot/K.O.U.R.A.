@@ -1,0 +1,14 @@
+[Unit]
+Description=Convert camera FIFO to HLS
+Requires=camera.service
+After=camera.service
+
+[Service]
+Type=simple
+ExecStart=/home/aapo/camera_pipeline/camera_converter.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
+

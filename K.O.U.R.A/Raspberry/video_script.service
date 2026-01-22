@@ -1,0 +1,17 @@
+[Unit]
+Description=KOURA camera pipeline (video -> HLS)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/home/aapo/camera_pipeline
+ExecStart=/home/aapo/camera_pipeline/run_camera_pipeline.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
+
