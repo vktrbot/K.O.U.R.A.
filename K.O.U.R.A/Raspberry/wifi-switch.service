@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=oneshot
-ExecStart=/home/aapo/wifi_switch.sh
+ExecStart=/home/pi/wifi_switch.sh
 RemainAfterExit=yes
 
 [Install]
