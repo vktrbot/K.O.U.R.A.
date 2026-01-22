@@ -7,8 +7,8 @@ Wants=network-online.target
 Type=simple
 User=root
 Group=root
-WorkingDirectory=/home/aapo/camera_pipeline
-ExecStart=/home/aapo/camera_pipeline/run_camera_pipeline.sh
+WorkingDirectory=/home/pi/camera_pipeline
+ExecStart=/home/pi/camera_pipeline/run_camera_pipeline.sh
 Restart=always
 RestartSec=2
 
