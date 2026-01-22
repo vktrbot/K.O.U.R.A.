@@ -5,25 +5,24 @@ After=network.target
 [Service]
 Type=simple
 
-# Your user (or use pi)
+# User
 User=aapo
 Group=gpio
 SupplementaryGroups=gpio
 
-# Ensure Python has full environment
 Environment=PYTHONUNBUFFERED=1
 
-# Command to run your script
-ExecStart=/home/aapo/Desktop/koura/venv_koura/bin/python /home/aapo/Desktop/koura/server_pi.py
+# Command to run
+ExecStart=/home/pi/Desktop/koura/venv_koura/bin/python /home/pi/Desktop/koura/server_pi.py
 
-# Restart if it crashes
+# Restart 
 Restart=on-failure
 RestartSec=5
 
-# Ensure correct working directory
-WorkingDirectory=/home/aapo/Desktop/koura  
+# Directory
+WorkingDirectory=/home/pi/Desktop/koura  
 
-# Standard logs go to journalctl
+# Standard logs
 StandardOutput=journal
 StandardError=journal
 
