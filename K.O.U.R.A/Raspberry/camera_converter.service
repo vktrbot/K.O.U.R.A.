@@ -5,7 +5,7 @@ After=camera.service
 
 [Service]
 Type=simple
-ExecStart=/home/aapo/camera_pipeline/camera_converter.sh
+ExecStart=/home/pi/camera_pipeline/camera_converter.sh
 Restart=always
 RestartSec=2
 
